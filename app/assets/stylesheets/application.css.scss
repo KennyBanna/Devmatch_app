@@ -22,11 +22,22 @@ h1, h2, h3{
 }
 
 //Navbar styles
-.navbar{
+.navbar, .home-callout{
   border: none;
   background: #44A08D; /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #44A08D , #093637); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #44A08D , #093637); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+}
+
+.home-callout{
+  color: white;
+  margin-top: -20px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  h1{
+    font-weight: 600;  
+  }
+  
 }
 
 .navbar-default .navbar-brand{
@@ -40,8 +51,4 @@ h1, h2, h3{
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus, .navbar-default .navbar-nav > li > a:hover {
   color: #aEaEaC;
-}
-
-.fa .fa-bath .navbar-brand{
-  height: 40px;
 }
