@@ -15,6 +15,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@import "font-awesome";
+
 h1, h2, h3{
   font-family: 'Ubuntu', sans-serif, helvetica;
 }
@@ -27,10 +29,19 @@ h1, h2, h3{
   background: linear-gradient(to left, #44A08D , #093637); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
 }
 
-.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a{
+.navbar-default .navbar-brand{
+  color: white;
+  font-size: 150%;
+}
+
+.navbar-default .navbar-nav > li > a{
   color: white;
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus, .navbar-default .navbar-nav > li > a:hover {
   color: #aEaEaC;
+}
+
+.fa .fa-bath .navbar-brand{
+  height: 40px;
 }
