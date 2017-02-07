@@ -1,8 +1,8 @@
 Contact us
 
--Button in navbar
--We need routes for new contact(GET new contact) and create contact (POST contact)
--Button should lead to new form
+-Button in navbar X
+-We need routes for new contact(GET new contact) and create contact (POST contact) X
+-Button should lead to new form X
 -Form fields should be connected to database
 -Form should submit POST request to server
 -Fields should be validated

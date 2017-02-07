@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="text-center">
+        <h1>Contact Us</h1>
+        <p>Send us an email for questions or thoughts about the site</p>
+      </div>
+      <div class="well">
+        <%= form_for '/contacts' do |f| %>
+          <%= f.label :name, 'Name' %>
+          <%= f.text_field :name, class: 'form-control'%>
+          
+          <%= f.label :email, 'Email' %>
+          <%= f.text_field :email, class: 'form-control' %>
+          
+          <%= f.label :contacts, 'Question' %>
+          <%= f.text_area :contacts, class: 'form-control' %>
+          
+          <%= f.submit 'Submit', class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
