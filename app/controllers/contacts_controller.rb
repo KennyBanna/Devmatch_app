@@ -6,12 +6,20 @@ class ContactsController < ApplicationController
   
   def create
     #creates contact object with mass assignment
-    @contact = Contact( contact_params )
+    @contact = Contact.new( contact_params )
+    
+    if @contact.save
+      #Save to contacts table in database
+      redirect_to root_path, notice: "Successfully sent comment"
+    else
+      #Redirect to empty form
+      redirect_to new_contact_path, notice: "Error"
+    end
   end
   
   #Whitelisting form fields as best practice security feature 
   def contact_params
-    params.require(:contacts).permit(:name, :email, :contacts)
+    params.require(:contact).permit(:name, :email, :comment)
   end
   
 end

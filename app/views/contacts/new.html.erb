@@ -6,7 +6,7 @@
         <p>Send us an email for questions or thoughts about the site</p>
       </div>
       <div class="well">
-        <%= form_for '/contacts' do |f| %>
+        <%= form_for @contact do |f| %>
           <div class="form-group">
             <%= f.label :name, 'Name' %>
             <%= f.text_field :name, class: 'form-control'%>
@@ -16,8 +16,8 @@
             <%= f.text_field :email, class: 'form-control' %>
           </div>
           <div class="form-group">
-            <%= f.label :contacts, 'Question' %>
-            <%= f.text_area :contacts, class: 'form-control' %>
+            <%= f.label :comment, 'Question' %>
+            <%= f.text_area :comment, class: 'form-control' %>
           </div>
           <%= f.submit 'Submit', class: 'btn btn-primary' %>
         <% end %>
