@@ -1,0 +1,8 @@
+Contact us
+
+-Button in navbar
+-Button should lead to new form
+-Form fields should be connected to database
+-Form should submit POST request to server
+-Fields should be validated
+-Contact email should be saved in database
