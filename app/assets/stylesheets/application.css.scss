@@ -17,6 +17,10 @@
 
 @import "font-awesome";
 
+body{
+  position: relative;
+}
+
 h1, h2, h3{
   font-family: 'Ubuntu', sans-serif, helvetica;
 }
@@ -32,12 +36,16 @@ h1, h2, h3{
 .home-callout{
   color: white;
   margin-top: -20px;
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   h1{
     font-weight: 600;  
   }
-  
+}
+
+.flash-container{
+  position: absolute;
+  width: 100%;
 }
 
 .navbar-default .navbar-brand{

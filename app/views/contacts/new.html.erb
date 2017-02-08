@@ -1,12 +1,10 @@
 <div class="container">
   <div class="row">
+    <h1 class="text-center">Contact Us</h1>
+    <p class="text-center">Send us an email for questions or thoughts about the site</p>
     <div class="col-md-6 col-md-offset-3">
-      <div class="text-center">
-        <h1>Contact Us</h1>
-        <p>Send us an email for questions or thoughts about the site</p>
-      </div>
       <div class="well">
-          <%= form_for @contact do |f| %>
+        <%= form_for @contact do |f| %>
           <div class="form-group">
             <%= f.label :name, 'Name' %>
             <%= f.text_field :name, class: 'form-control'%>
