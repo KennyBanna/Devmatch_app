@@ -13,7 +13,7 @@ class ContactsController < ApplicationController
       redirect_to root_path, notice: "Successfully sent comment"
     else
       #Redirect to empty form
-      redirect_to new_contact_path, notice: "Error"
+      redirect_to new_contact_path, notice: @contact.errors.full_messages
     end
   end
   
