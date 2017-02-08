@@ -10,10 +10,12 @@ class ContactsController < ApplicationController
     
     if @contact.save
       #Save to contacts table in database
-      redirect_to root_path, notice: "Successfully sent comment"
+      redirect_to root_path
+      flash[:success] = "Successfully sent your question"
     else
       #Redirect to empty form
-      redirect_to new_contact_path, notice: @contact.errors.full_messages
+      redirect_to new_contact_path
+      flash[:danger] = "Error: " + @contact.errors.full_messages.join(", ")
     end
   end
   
