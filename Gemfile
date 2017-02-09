@@ -33,6 +33,9 @@ gem 'bootstrap-sass', '3.3.7'
 # Use font-awesome for UI icons
 gem "font-awesome-rails", '4.7.0.1'
 
+# Use Devise for user authentication
+gem 'devise', '4.2.0'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
