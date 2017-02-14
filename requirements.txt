@@ -9,3 +9,10 @@ Contact us
 -Contact email should be saved in database X
 
 User Plans
+
+-Plan table with (ID), cost and timestamps
+-Active record 1:many relationship between plan and user
+-Database seed for plan table
+-Options on webpage to sign up with either page
+-Basic sign up should be the normal page
+-STRIPE
