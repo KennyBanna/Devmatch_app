@@ -10,7 +10,7 @@ Contact us
 
 User Plans
 
--Plan table with (ID), cost and timestamps
+-Plan table with (ID), cost and timestamps X
 -Active record 1:many relationship between plan and user
 -Database seed for plan table
 -Options on webpage to sign up with either page
