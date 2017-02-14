@@ -23,7 +23,11 @@
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <%= link_to 'Log in', new_user_session_path, class: 'btn btn-default navbar-btn navbar-right' %>
+          <% if user_signed_in? %>
+            <%= asdasd %>
+          <% else%> 
+            <%= link_to 'Log in', '/#', class: 'btn btn-default navbar-btn navbar-right' %>
+          <% end %> 
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to 'About', '/about' %></li>
             <li><%= link_to 'Contact us', new_contact_path %></li>
