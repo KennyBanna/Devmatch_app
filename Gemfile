@@ -36,6 +36,15 @@ gem "font-awesome-rails", '4.7.0.1'
 # Use Devise for user authentication
 gem 'devise', '4.2.0'
 
+# Use Hirb for displaying tables in console better
+gem 'hirb', '0.7.3'
+
+# Use stripe gem for online payment processing
+gem 'stripe', '1.48.0'
+
+# Use Figaro for env variables
+gem 'figaro', '1.1.1'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
