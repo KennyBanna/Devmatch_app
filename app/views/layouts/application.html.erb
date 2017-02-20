@@ -27,9 +27,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <% if user_signed_in? %>
-            <%= asdasd %>
+            <%= link_to 'Log out',  destroy_user_session_path, method: :delete, class: 'btn btn-default navbar-btn navbar-right' %>
           <% else%> 
-            <%= link_to 'Log in', '/#', class: 'btn btn-default navbar-btn navbar-right' %>
+            <%= link_to 'Log in',  new_user_session_path, class: 'btn btn-default navbar-btn navbar-right' %>
           <% end %> 
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to 'About', '/about' %></li>

@@ -28,6 +28,8 @@ $(document).on('turbolinks:load', function(){
       exp_month: cardExpMonth,
       exp_year: cardExpYear
     }, stripeResponseHandler);
+    
+  return false;
   
   });
     
@@ -43,13 +45,14 @@ $(document).on('turbolinks:load', function(){
       theForm.append( $('<input type="hidden" name="user[stripe_card_token]">').val(token) );
       
       //Save customer to rails app
-      theForm.get(0).submit;
+      theForm.get(0).submit();
       
+      alert("it works")
     } else {
       //Display error message
       alert(response.error.message);
       //enable button
-      signupBtn.val("Sign Up").prop('disabled', true);
+      signupBtn.val("Sign Up").prop('disabled', false);
     }
     
   }
