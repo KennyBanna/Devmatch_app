@@ -16,3 +16,9 @@ User Plans
 -Options on webpage to sign up with either page
 -Basic sign up should be the normal page
 -STRIPE
+
+Profiles
+-create profile migration 
+-1:1 relation in model
+-add profile to user
+-add form to create profile
