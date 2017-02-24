@@ -10,11 +10,11 @@ class ProfilesController < ApplicationController
   
   def create
     
-    @user = current_user
+    @user = User.find( params[:user_id])
     #build_association method comes from the "has_one" relationsship  
-    @user.build_profile( profile_parameters )
+    @profile = @user.build_profile( profile_parameters )
     
-    if @user.save
+    if @profile.save
       flash[:success] = 'Successfully created profile'
       redirect_to root_path
     else

@@ -1,8 +1,8 @@
 <div class="col-md-4 col-md-offset-2 text-center">
   <div class="well">
     <% if current_user.profile %>
-      <%= link_to 'View your profile', '#', class: 'btn btn-default btn-lg' %>
-      <%= link_to 'Edit your profile', '#', class: 'btn btn-default btn-lg' %> 
+      <%= link_to 'View your profile', user_path(id: current_user.id), class: 'btn btn-default btn-lg' %>
+      <%= link_to 'Edit your profile', edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg' %> 
     <% else %>
       <%= link_to 'Create profile', new_user_profile_path(user_id: current_user.id), class: 'btn btn-primary btn-lg' %> 
     <% end %> 
