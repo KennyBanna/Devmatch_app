@@ -33,6 +33,7 @@ h1, h2, h3{
   background: linear-gradient(to left, #44A08D , #093637); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
 }
 
+//homepage styles
 .home-callout{
   color: white;
   margin-top: -20px;
@@ -41,6 +42,10 @@ h1, h2, h3{
   h1{
     font-weight: 600;  
   }
+}
+
+.sign-up-fields{
+  margin-top: 30px;
 }
 
 .flash-container{
