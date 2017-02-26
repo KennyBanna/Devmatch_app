@@ -9,7 +9,7 @@ class ProfilesController < ApplicationController
       if !current_user.profile
         @profile = Profile.new
       else 
-        flash[:danger] = "You already have a profile"
+        flash[:notice] = "You already have a profile"
         redirect_to root_path
       end
     else
