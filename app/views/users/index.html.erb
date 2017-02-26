@@ -1,12 +1,23 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6 col-md-offset-2">
-      <h1>Community</h1>
-      <% @users.each do |u| %>
-        <div class="well">
-          <h3><%= u.profile.fname + " " + u.profile.lname %></h3>
-        </div>
-      <% end %>
+    <div class="col-md-8 col-md-offset-2">
+      <h1 class="text-center community-logo">Community</h1>
+      <ul class="list-unstyled">
+        <% @users.each do |u| %>
+          <% if u.profile %>
+            <li>
+              <div class="row well <%= cycle('white-bg', ' ') %>">
+                <div class="col-sm-6 col-sm-offset-2">
+                  <%= link_to u, class: 'profile-name-link' do %>
+                    <h3><%= u.profile.fname + " " + u.profile.lname %></h3>
+                  <% end %>
+                  <p><%= u.profile.title %></p>
+                </div>
+              </div>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
     </div>
   </div>
 </div>
