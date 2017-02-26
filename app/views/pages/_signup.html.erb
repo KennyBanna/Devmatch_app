@@ -2,13 +2,13 @@
   <div class="well">
     <h2>Basic</h2>
     <p>Sign up with the basic plan for free to get access to the community</p>
-    <%= link_to 'Basic', new_user_registration_path(:plan => @basic_plan.id), class: 'btn btn-primary btn-lg' %>
+    <%= link_to 'Basic', new_user_registration_path(:plan => @basic_plan.id), class: 'btn btn-primary btn-block btn-lg' %>
   </div>
 </div>
 <div class="col-md-5 text-center">
   <div class="well">
     <h2>Pro</h2>
     <p>Sign up with the Pro plan for 10$/month for community access and access to contact information</p>
-    <%= link_to 'Pro', new_user_registration_path(:plan => @pro_plan.id), class: 'btn btn-success btn-lg' %>
+    <%= link_to 'Pro', new_user_registration_path(:plan => @pro_plan.id), class: 'btn btn-success btn-block btn-lg' %>
   </div>
 </div>
