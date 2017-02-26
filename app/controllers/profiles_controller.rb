@@ -27,6 +27,7 @@ class ProfilesController < ApplicationController
       flash[:success] = 'Successfully created profile'
       redirect_to root_path
     else
+       
       render 'new'
     end
     
