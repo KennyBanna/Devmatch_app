@@ -27,8 +27,9 @@ class ProfilesController < ApplicationController
       flash[:success] = 'Successfully created profile'
       redirect_to root_path
     else
-       
+      #Error messages
       render 'new'
+      flash[:danger] = @profile.errors.full_messages.join(", ")
     end
     
   end
