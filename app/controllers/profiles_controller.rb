@@ -4,15 +4,11 @@ class ProfilesController < ApplicationController
   before_action :only_current_user
   
   def new
-    if user_signed_in?
-      #Users already with a profile gets redirected
-      if !current_user.profile
-        @profile = Profile.new
-      else 
-        flash[:notice] = "You already have a profile"
-        redirect_to root_path
-      end
-    else
+    #Users already with a profile gets redirected
+    if !current_user.profile
+      @profile = Profile.new
+    else 
+      flash[:notice] = "You already have a profile"
       redirect_to root_path
     end
   end
@@ -28,10 +24,28 @@ class ProfilesController < ApplicationController
       redirect_to root_path
     else
       #Error messages
-      render 'new'
+      render action: :new
       flash[:danger] = @profile.errors.full_messages.join(", ")
     end
     
+  end
+  
+  #GET to /Users/:id/profile/edit
+  def edit
+    @profile = User.find( params[:user_id] ).profile
+  end
+  
+  #PUT/PATch request to /Users/:id/profile/edit
+  def update
+    @profile = User.find( params[:user_id] ).profile
+    if @profile.update_attributes( profile_parameters )
+      flash[:success] = 'Successfully updated profile info'
+      #show user
+      redirect_to user_path( id: current_user.id )
+    else
+      flash[:danger] = @profile.errors.full_messages.join(', ')
+      render action: :edit
+    end
   end
   
   private 
