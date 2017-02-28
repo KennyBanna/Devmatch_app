@@ -45,6 +45,9 @@ gem 'stripe', '1.48.0'
 # Use Figaro for env variables
 gem 'figaro', '1.1.1'
 
+# Use Paperclip for image file attachments
+gem 'paperclip', '5.1.0'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
