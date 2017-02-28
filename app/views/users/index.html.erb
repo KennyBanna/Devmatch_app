@@ -7,7 +7,10 @@
           <% if u.profile %>
             <li>
               <div class="row well <%= cycle('white-bg', ' ') %>">
-                <div class="col-sm-6 col-sm-offset-2">
+                <div class="col-sm-3">
+                  <%= image_tag u.profile.avatar.url %>
+                </div>
+                <div class="col-sm-6">
                   <%= link_to u, class: 'profile-name-link' do %>
                     <h3><%= u.profile.fname + " " + u.profile.lname %></h3>
                   <% end %>
