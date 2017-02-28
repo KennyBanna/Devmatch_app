@@ -1,4 +1,4 @@
-<%= form_for @profile, url: user_profile_path do |f| %> 
+<%= form_for @profile, url: user_profile_path, html: {multipart: true} do |f| %> 
   <div class="form-group">
     <%= label_tag :fname, 'First Name' %>
     <%= f.text_field :fname, class: 'form-control' %>
@@ -8,6 +8,12 @@
     <%= label_tag :lname, 'Last Name' %>
     <%= f.text_field :lname, class: 'form-control' %>
   </div>
+  
+  <div class="form-group">
+    <%= label_tag :avatar, 'Profile picture' %>
+    <%= f.file_field :avatar %>
+  </div>
+  
   <div class="form-group">
     <%= label_tag :title, 'Job title' %>
     <%= f.select :title, ['Developer', 'Entrepeneur', 'Student'], class: 'form-control' %>
