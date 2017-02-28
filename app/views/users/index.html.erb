@@ -8,7 +8,7 @@
             <li>
               <div class="row well <%= cycle('white-bg', ' ') %>">
                 <div class="col-sm-3">
-                  <%= image_tag u.profile.avatar.url %>
+                  <%= image_tag u.profile.avatar.url, class: 'profile-avatar' %>
                 </div>
                 <div class="col-sm-6">
                   <%= link_to u, class: 'profile-name-link' do %>
